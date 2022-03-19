@@ -17,19 +17,26 @@ public:
     /*
     * Errors
     */
-
+     double p_error;
+	 double i_error;
+	 double d_error;
+	 
     /*
     * Coefficients
     */
+    double kp_i; 
+	double ki_i;
+	double kd_i;
 
     /*
     * Output limits
     */
-  
+  	double output_lim_max_i;
+	double output_lim_min_i;
     /*
     * Delta time
     */
-
+     double new_delta_time_i ;
     /*
     * Constructor
     */
