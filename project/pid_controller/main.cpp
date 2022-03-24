@@ -302,7 +302,7 @@ int main ()
           /**
           * TODO (step 3): compute the steer error (error_steer) from the position and the desired trajectory
           **/
-           error_steer = error_steer = 5 * (y_position - y_points[0]);
+           error_steer = 6 * (y_position - y_points[0]);
 
           /**
           * TODO (step 3): uncomment these lines
