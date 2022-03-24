@@ -34,8 +34,8 @@ void PID::UpdateError(double cte) {
    /**
    * TODO: Update PID errors based on cte.
    **/
-   double pre_perror=perror;
-   perror=cte;
+   double pre_perror= p_error;
+   p_error=cte;
    d_error= (cte-pre_perror)/ new_delta_time_i;
    i_error=i_error+(cte)*new_delta_time_i;
 }
@@ -47,7 +47,7 @@ double PID::TotalError() {
    */
     double control;
 	
-	control= perror*kpi_i + d_error*kdi_i+ i_error*kii_i;
+	control= p_error*kpi_i + d_error*kdi_i+ i_error*kii_i;
 	
 	control = max(output_lim_max_i,control);
 	control = min (output_lim_min_i,control);

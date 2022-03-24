@@ -4,6 +4,8 @@
  *      Author: Mathilde Badoual
  **********************************************/
 
+ 
+
 #ifndef PID_CONTROLLER_H
 #define PID_CONTROLLER_H
 
@@ -24,9 +26,9 @@ public:
     /*
     * Coefficients
     */
-    double kp_i; 
-	double ki_i;
-	double kd_i;
+    double kpi_i; 
+	double kii_i;
+	double kdi_i;
 
     /*
     * Output limits
