@@ -219,14 +219,14 @@ int main ()
   * TODO (Step 1): create pid (pid_steer) for steer command and initialize values
   **/
   PID pid_steer = PID();
-  pid_steer.Init(0.5, 0.1, 0.5, 1.1, -1.1);
+  pid_steer.Init(0.5, 0.001, 1.2, 1.2, -1.2);
 
   // initialize pid throttle
   /**
   * TODO (Step 1): create pid (pid_throttle) for throttle command and initialize values
   **/
   PID pid_throttle = PID();
-  pid_throttle.Init(0.5, 0.1, 0.5, 1.0, -1.0);
+  pid_throttle.Init(0.5, 0.001, 1.2, 1.0, -1.0);
   
   
 
@@ -302,7 +302,7 @@ int main ()
           /**
           * TODO (step 3): compute the steer error (error_steer) from the position and the desired trajectory
           **/
-           error_steer = 6 * (y_position - y_points[0]);
+           error_steer =  yaw - (angle_between_points(x_points[0],y_points[0],x_points[1],y_points[1]);
 
           /**
           * TODO (step 3): uncomment these lines
