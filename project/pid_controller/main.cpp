@@ -302,7 +302,7 @@ int main ()
           /**
           * TODO (step 3): compute the steer error (error_steer) from the position and the desired trajectory
           **/
-           error_steer =  yaw - (angle_between_points(x_points[0],y_points[0],x_points[1],y_points[1]);
+           error_steer =  yaw - (angle_between_points(x_points[0],y_points[0],x_points[1],y_points[1]));
 
           /**
           * TODO (step 3): uncomment these lines
