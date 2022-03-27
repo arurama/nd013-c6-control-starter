@@ -54,7 +54,7 @@ double PID::TotalError() {
    */
   double control;
 
-  control = p_error * kpi_i + d_error * kdi_i + i_error * kii_i;
+  control = (-p_error * kpi_i - d_error * kdi_i - i_error * kii_i);
   
   control = min(output_lim_max_i, max(output_lim_min_i, control));
 
