@@ -15,8 +15,7 @@ PID::PID() {}
 
 PID::~PID() {}
 
-void PID::Init(double Kpi, double Kii, double Kdi, double output_lim_maxi,
-               double output_lim_mini) {
+void PID::Init(double Kpi, double Kii, double Kdi, double output_lim_maxi, double output_lim_mini) {
   /**
    * TODO: Initialize PID coefficients (and errors, if needed)
    **/

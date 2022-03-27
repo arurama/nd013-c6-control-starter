@@ -219,14 +219,14 @@ int main ()
   * TODO (Step 1): create pid (pid_steer) for steer command and initialize values
   **/
   PID pid_steer = PID();
-  pid_steer.Init(0.5, 0.001, 1.2, 1.2, -1.2);
+  pid_steer.Init(0.3, 0.001, 1.2, 1.2, -1.2);
 
   // initialize pid throttle
   /**
   * TODO (Step 1): create pid (pid_throttle) for throttle command and initialize values
   **/
   PID pid_throttle = PID();
-  pid_throttle.Init(0.5, 0.001, 1.2, 1.0, -1.0);
+  pid_throttle.Init(0.1, 0.0001, 1.2, 1.0, -1.0);
   
   
 
@@ -340,7 +340,7 @@ int main ()
           // modify the following line for step 2
           error_throttle = 0;
 
-          error_throttle =  v_points.back() - velocity ;
+          error_throttle =   velocity - v_points[v_points.size()-1]; ;
 
 
 
